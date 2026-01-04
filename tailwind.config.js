@@ -9,8 +9,11 @@ export default {
       colors: {
         background: "#EEEEEE",
         primary: '#37AFE1',
-        secondary:'#F1F0E8',
+        secondary:'#808080',
         hover:'#4CC9FE',
+      },
+      fontFamily: {
+        sans: ['"Inter Variable"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },

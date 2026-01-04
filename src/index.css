@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    @apply bg-background;
+    @apply bg-background font-sans antialiased;;
 }
 input[type="text"],
 input[type="email"],
@@ -21,9 +22,11 @@ input[type="password"]:focus {
 }
 
 label {
-    @apply self-start mx-9 block text-sm font-medium ;
+    @apply self-start mx-7 block text-sm font-medium ;
 }
 
 button ,input[type="submit"]{
     @apply cursor-pointer;
 }
+
+
