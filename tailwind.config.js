@@ -5,7 +5,14 @@ export default {
     "./public/index.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        background: "#EEEEEE",
+        primary: '#37AFE1',
+        secondary:'#F1F0E8',
+        hover:'#4CC9FE',
+      },
+    },
   },
   plugins: [],
 }
