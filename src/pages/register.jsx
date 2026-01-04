@@ -33,7 +33,7 @@ function Register() {
                 </button>
             </div>
             <p className="text-secondary font-bold">Already have an account?{" "}
-                <Link to='./login' className="text-primary">
+                <Link to='/' className="text-primary">
                     Log in
                 </Link>
             </p>

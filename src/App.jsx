@@ -5,12 +5,12 @@ import Register from "./pages/register.jsx";
 function App() {
 
   return (
-    <>
+    
       <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Login />} />
       </Routes>
-    </>
+    
   )
 }
 export default App
