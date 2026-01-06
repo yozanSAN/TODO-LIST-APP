@@ -4,13 +4,13 @@ function Register() {
 
     return (
         <div className="text-center flex flex-col justify-center items-center gap-2">
-            <div className="flex justify-center items-center my-10">
+            <div className="flex justify-center items-center my-5">
                 <img src='/logo.png' alt='logo' className=' w-10 h-10' />
                 <h1 className='text-xl'>Task Flow</h1>
             </div>
             <h1 className='text-4xl font-bold'>Create Your Account</h1>
 
-            <div className="bg-white flex flex-col justify-evenly items-center gap-4 py-5 my-5 mx-36 rounded-xl min-w-[30rem]">
+            <div className="bg-white flex flex-col justify-evenly items-center gap-4 py-5 my-5 mt-5 rounded-xl min-w-[30rem]">
                 <label htmlFor="username" >Username</label>
                 <input placeholder="Enter your username" type="text" />
 
@@ -32,7 +32,7 @@ function Register() {
                     Google
                 </button>
             </div>
-            <p className="text-secondary font-bold">Already have an account?{" "}
+            <p className="text-secondary font-bold mb-5">Already have an account?{" "}
                 <Link to='/' className="text-primary">
                     Log in
                 </Link>

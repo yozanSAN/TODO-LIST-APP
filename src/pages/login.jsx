@@ -17,14 +17,14 @@ function Login() {
 
                     <label htmlFor="password">Password</label>
                     <input placeholder="Enter your password" type="password" />
-
+                    {/* TODO: APPLY FORGOT PASSWORD FUNCTIONALITY */}
 
                     <input type="submit" value="Log in" className='font-bold w-[90%] py-3 rounded-md bg-primary text-white hover:bg-hover' />
 
                 </div>
                 <p className="text-secondary font-bold">New here?{" "}
                     <Link to='./register' className="text-primary">
-                       Create an Account
+                        Create an Account
                     </Link>
                 </p>
             </div>
