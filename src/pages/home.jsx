@@ -4,6 +4,7 @@ import tasksData from "../data/tasks";
 import NoTasks from "../components/NoTasks";
 import { useState } from "react";
 function Home() {
+    const [input, setInput] = useState('');
     const [tasks, setTasks] = useState(tasksData);
     const [isActiveButton, setIsActiveButton] = useState('all');
     //FILTERING TASKS BY THE STATUS
@@ -18,11 +19,25 @@ function Home() {
         setIsActiveButton('completed');
         setTasks(completedTasks)
     };
-
     const handleAllClick = () => {
         setIsActiveButton('all');
         setTasks(tasksData)
     };
+
+    //HANDLE ADD TASK
+    const handleAddTask = () => {
+        if (!input) {
+            alert('invalid input');
+            return;
+        }
+        const newts = {
+            id: 3,
+            title: input,
+            status: 'active',
+        }
+        setTasks([...tasks, newts]);
+        setInput('');
+    }
 
     return (
         <div className="flex flex-col justify-center items-start mx-40 my-10 gap-2">
@@ -35,16 +50,18 @@ function Home() {
                 </div>
 
                 <div className="flex">
-                    <input className="!rounded-none !rounded-s-lg !bg-background" type="text" placeholder="Add a new task" />
-                    <button className="bg-primary py-3 px-3 rounded-r-lg hover:bg-hover"><IoAddCircleOutline className="w-6 h-6 text-white" /></button>
+                    <input className="!rounded-none !rounded-s-lg !bg-background" type="text" placeholder="Add a new task" value={input} onChange={(e) => setInput(e.target.value)} />
+                    <button onClick={handleAddTask} className="bg-primary py-3 px-3 rounded-r-lg hover:bg-hover">
+                        <IoAddCircleOutline className="w-6 h-6 text-white" />
+                    </button>
                 </div>
 
-                <div className="flex justify-center items-center gap-5 bg-background py-2 max-w-[95%] rounded-md">
-                    <button onClick={handleAllClick} className={` px-32 py-1 rounded-md hover:bg-white text-black ${isActiveButton === 'all' ? 'bg-white text-black' : 'bg-transparent text-secondary'}`}>All</button>
+                <div className="flex justify-center items-center gap-3 bg-background py-1 px-1 max-w-[95%] rounded-md">
+                    <button onClick={handleAllClick} className={`w-[33%] py-1 rounded-md hover:bg-white text-black ${isActiveButton === 'all' ? 'bg-white text-black' : 'bg-transparent text-secondary'}`}>All</button>
 
-                    <button onClick={handleActiveClick} className={` px-32 py-1 rounded-md hover:bg-white text-black ${isActiveButton === 'active' ? 'bg-white text-black' : 'bg-transparent text-secondary'}`}>Active</button>
+                    <button onClick={handleActiveClick} className={` w-[33%] py-1 rounded-md hover:bg-white text-black ${isActiveButton === 'active' ? 'bg-white text-black' : 'bg-transparent text-secondary'}`}>Active</button>
 
-                    <button onClick={handleCompletedClick} className={` px-32 py-1 rounded-md hover:bg-white text-black ${isActiveButton === 'completed' ? 'bg-white text-black' : 'bg-transparent text-secondary'}`}>Completed</button>
+                    <button onClick={handleCompletedClick} className={` w-[33%] py-1 rounded-md hover:bg-white text-black ${isActiveButton === 'completed' ? 'bg-white text-black' : 'bg-transparent text-secondary'}`}>Completed</button>
                 </div>
                 <div>
 
