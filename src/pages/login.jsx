@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "./../helper/supabaseClient.js";
 
@@ -6,6 +6,7 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
 
     //HANDLE LOGIN 
     const handleLogin = async (e) => {
@@ -14,16 +15,19 @@ function Login() {
         const { data, error } = await supabase.auth.signInWithPassword({
             email: email,
             password: password
-        })
+        });
+
         if (error) {
             console.error('Login failed:', error.message);
-            alert('Login failed', error.message);
+            alert('Login failed: ' + error.message);
         } else {
             console.log('Logged in successfully:', data);
-             alert('Logged in successfully');
-            navigate('/home');
+            
+            // Redirect to intended destination or home
+            const from = location.state?.from || '/home';
+            navigate(from, { replace: true });
         }
-    }
+    };
 
     return (
         <div>
@@ -37,22 +41,21 @@ function Login() {
                 <form onSubmit={handleLogin} className=" flex flex-col justify-evenly items-center gap-4 py-5 my-5 mx-36 rounded-xl min-w-[30rem]">
 
                     <label htmlFor="email">Email</label>
-                    <input placeholder="Enter your Email" type="text" required value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input placeholder="Enter your Email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
 
                     <label htmlFor="password">Password</label>
                     <input placeholder="Enter your password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-                    {/* TODO: APPLY FORGOT PASSWORD FUNCTIONALITY */}
 
                     <button type="submit" className='font-bold w-[90%] py-3 rounded-md bg-primary text-white hover:bg-hover'>Log in</button>
                 </form>
                 <p className="text-secondary font-bold">New here?{" "}
-                    <Link to='./register' className="text-primary">
+                    <Link to='/' className="text-primary">
                         Create an Account
                     </Link>
                 </p>
             </div>
         </div>
-    )
+    );
 }
 
 export default Login;

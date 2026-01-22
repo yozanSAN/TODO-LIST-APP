@@ -7,6 +7,7 @@ import SortableTask from "../components/SortableTask";
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy, arrayMove } from "@dnd-kit/sortable";
 import toast, { Toaster } from "react-hot-toast";
+import  { useNavigate } from "react-router-dom";
 
 function Home() {
   const [input, setInput] = useState("");
@@ -16,18 +17,27 @@ function Home() {
   const [isAddingTask, setIsAddingTask] = useState(false);
   const [user, setUser] = useState(null);
 
+  const navigate = useNavigate();
+
   // -------------------- AUTH CHECK --------------------
   useEffect(() => {
     const checkUser = async () => {
       const { data: { user }, error } = await supabase.auth.getUser();
       if (error || !user) {
         toast.error("Please log in to continue");
+        navigate('/login');
         return;
       }
       setUser(user);
     };
     checkUser();
-  }, []);
+  }, [navigate]); 
+
+  //HANDLE LOGOUT
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/login');
+  };
 
   // -------------------- FETCH TASKS --------------------
   const fetchTasks = useCallback(async (filter, userId) => {
@@ -220,7 +230,11 @@ function Home() {
         <p className="text-xl text-secondary">
           A clean minimalist to-do app to keep you organized
         </p>
-
+            <button
+          onClick={handleLogout}
+           className="text-secondary font-bold mb-5">
+            Logout
+          </button>
         <div className="bg-white my-10 grid grid-cols-1 gap-10 p-5 rounded-xl w-full">
           {/* New Task Input */}
           <div>

@@ -1,16 +1,13 @@
-Task Management Dashboard ⭐⭐⭐⭐⭐
-   Time: 2-3 days | Impact: VERY HIGH
-   Description: Trello/Notion-style task management application
-   Demonstrated Skills:
-
+Task Management App
+  
 CRUD operations
 Drag & Drop (react-beautiful-dnd)
 Local Storage / State management
 Modern UI/UX
 Responsive design
 
-Stack: React + Tailwind + Context API or Redux
-Must-Have Features:
+Stack: React + Tailwind + Supabase
+Features:
 
 Create/Edit/Delete tasks
 Statuses: Todo, In Progress, Done
@@ -21,7 +18,7 @@ Statistics (% completion)
 
 Bonus Features:
 
-Authentication (Firebase)
+Authentication (supabase)
 Notifications
 CSV export
 Due dates with reminders
