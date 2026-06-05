@@ -1,0 +1,98 @@
+[33mcommit 57225a6d346d5bbaa2d11fa07c966e19ba7bd72d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Thu Jan 22 19:13:38 2026 +0100
+
+    added routes protecting component +  google auth
+
+[33mcommit 43fa1b6f5214e0c8f5fdce1e1cb29cd96de3bf2c[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Wed Jan 14 18:44:05 2026 +0100
+
+    implement drag-and-drop functionality for task sorting and add react-hot-toast for notifications
+
+[33mcommit 68002ad15577fc871c5a439769b4db2c3d6157a8[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Wed Jan 14 17:22:06 2026 +0100
+
+    add TasksSkeleton component and integrate task fetching with Supabase
+
+[33mcommit d0d37597dd8e97ee6994435705216040fc282c23[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Sun Jan 11 16:49:33 2026 +0100
+
+    implement user authentication with Supabase in login and register pages;
+
+[33mcommit ef3ed38e3b4f26f3fd84ab1040646b1a500d335e[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Sun Jan 11 14:56:59 2026 +0100
+
+    supabase setup
+
+[33mcommit e235d650077f8a8d64f17310ce415b74f5777a16[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Wed Jan 7 19:06:17 2026 +0100
+
+    tasks filtering feature implemented
+
+[33mcommit 22de84fda09aa5d5ceff076cc2c149c7124f3675[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Tue Jan 6 20:57:37 2026 +0100
+
+    fixed the css bug: how to make the inline styling overrides the global styling in the task input right border
+
+[33mcommit 85b3f0297c4d219463f6a77ac3db356688698424[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Tue Jan 6 20:06:26 2026 +0100
+
+    modifying the register page + crafting home page
+
+[33mcommit c15b1046c50af4d830be72b155b4eb2b13119fef[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Sun Jan 4 15:54:17 2026 +0100
+
+    crafting log in page
+
+[33mcommit 86f21216a57bdd9a4b9164fc302018b61a6464dc[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Sun Jan 4 15:42:02 2026 +0100
+
+    updated register page UI
+
+[33mcommit 8759cfd789ee2e5db13f16787842df9fe0df912c[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Sun Jan 4 14:40:51 2026 +0100
+
+    crafting register page UI
+
+[33mcommit c02025b93c62bf404b7856c92dbf4c38e785b2ac[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Sat Jan 3 16:27:32 2026 +0100
+
+    update README file
+
+[33mcommit f8407c6aec36a04036deba0a9f719335c939e248[m
+Merge: d5bc74d d3e862e
+Author: yozanSAN <149335140+yozanSAN@users.noreply.github.com>
+Date:   Thu Jan 1 16:22:55 2026 +0100
+
+    Merge pull request #1 from yozanSAN/feature-branch
+    
+    modify readme file
+
+[33mcommit d3e862e54abf3c938211d4b23a4a2e737de2b3c3[m[33m ([m[1;31morigin/feature-branch[m[33m, [m[1;32mfeature-branch[m[33m)[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Thu Jan 1 16:10:30 2026 +0100
+
+    modify readme file
+
+[33mcommit d5bc74d03780d888cd86bf7fb3137517772c59c8[m[33m ([m[1;32mbranch-name[m[33m)[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Thu Jan 1 15:34:38 2026 +0100
+
+    navbar added
+
+[33mcommit 55cb3b7a925a36ee9e332cbc83805fc79f352da5[m
+Author: ayoub <ayoubpro183@gmail.com>
+Date:   Thu Jan 1 15:24:21 2026 +0100
+
+    first commit: project setup
